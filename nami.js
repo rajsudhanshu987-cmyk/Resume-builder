@@ -2,7 +2,16 @@
 const schema = [
     {
         id: "identity",
-        title: "identity",
-        fields:
+        tittle: "Identity",
+        fields: [
+            {
+                key: "fullname",
+                label: "Full Name",
+                type: "text",
+                placeholder: "Enter your full name",
+            
+
+            }
+        ]
     }
 ]
