@@ -51,4 +51,16 @@ const schema = [
     ],
   },
   {
+    id: "skills",
+    title: "Skills",
+    fields: [
+      {
+        key: "skills",
+        label: "Key skills (comma separated)",
+        type: "text",
+        placeholder: "Systems design, Data viz, Leadership",
+      },
+    ],
+  },
+  {
     
