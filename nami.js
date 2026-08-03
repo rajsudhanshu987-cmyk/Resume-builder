@@ -75,4 +75,13 @@ const schema = [
         type: "text",
         placeholder: "2022 - Present",
       },
-   
+      {
+        key: "highlights",
+        label: "Highlights (bullet per line)",
+        type: "textarea",
+        rows: 3,
+      },
+    ],
+  },
+  {
+    
