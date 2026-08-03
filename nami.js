@@ -84,4 +84,14 @@ const schema = [
     ],
   },
   {
-    
+    id: "education",
+    title: "Education",
+    repeatable: true,
+    fields: [
+      { key: "school", label: "Institution", type: "text" },
+      { key: "degree", label: "Degree", type: "text" },
+      { key: "period", label: "Period", type: "text" },
+      { key: "details", label: "Details", type: "textarea", rows: 2 },
+    ],
+  },
+];
