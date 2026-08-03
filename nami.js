@@ -63,4 +63,16 @@ const schema = [
     ],
   },
   {
-    
+    id: "experience",
+    title: "Experience",
+    repeatable: true,
+    fields: [
+      { key: "company", label: "Company", type: "text" },
+      { key: "title", label: "Role", type: "text" },
+      {
+        key: "period",
+        label: "Period",
+        type: "text",
+        placeholder: "2022 - Present",
+      },
+   
