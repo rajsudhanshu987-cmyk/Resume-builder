@@ -100,14 +100,23 @@ const templates = {
   minimal: {
     label: "Minimal",
     className: "template-minimal",
-    render: (data) =>
-      <header>
-        <h1>${data.fullName || "Suneo koze"}</h1>
-        <p class="text-muted">${data.role || "software"}</p>
-        <p>${joinValues(
-        [data.email, data.phone, data.location, data.website],
-        "."
-        )}</p>
-      </header>
+    render: (data) => (
+      <>
+        <header>
+          <h1>${data.fullName || "Suneo koze"}</h1>
+          <p className="text-muted">${data.role || "software"}</p>
+          <p>
+            ${joinValues(
+              [data.email, data.phone, data.location, data.website],
+              " . "
+            )}
+          </p>
+        </header>
+        <section>
+          <h2>Summary</h2>
+          <p>${data.summary || defaultSummary()}</p>
+        </section>
+      </>
+    ),
   },
 };
