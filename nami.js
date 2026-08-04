@@ -100,8 +100,8 @@ const templates = {
   minimal: {
     label: "Minimal",
     className: "template-minimal",
-    render: (data) => (
-      <>
+    render: (data) => `
+      
         <header>
           <h1>${data.fullName || "Suneo koze"}</h1>
           <p className="text-muted">${data.role || "software"}</p>
@@ -116,7 +116,9 @@ const templates = {
           <h2>Summary</h2>
           <p>${data.summary || defaultSummary()}</p>
         </section>
-      </>
+        
+        `
+      
     ),
   },
 };
