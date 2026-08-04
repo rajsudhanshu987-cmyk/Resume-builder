@@ -95,3 +95,12 @@ const schema = [
     ],
   },
 ];
+
+const templates = {
+  minimal: {
+    label: "Minimal",
+    className: "template-minimal",
+    render: (data) =>
+      
+  }
+}
