@@ -101,6 +101,13 @@ const templates = {
     label: "Minimal",
     className: "template-minimal",
     render: (data) =>
-      
-  }
-}
+      <header>
+        <h1>${data.fullName || "Suneo koze"}</h1>
+        <p class="text-muted">${data.role || "software"}</p>
+        <p>${joinValues(
+        [data.email, data.phone, data.location, data.website],
+        "."
+        )}</p>
+      </header>
+  },
+};
