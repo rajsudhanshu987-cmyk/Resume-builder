@@ -114,7 +114,7 @@ const templates = {
         </header>
         <section>
           <h2>Summary</h2>
-          <p>${data.summary || defaultSummary()}</p>
+          <p>${data.summary || defaultSummary()}</p >
         </section>
         
         `
