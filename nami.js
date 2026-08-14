@@ -128,4 +128,18 @@ const schema = [
           </div>
       `
       )}
-     
+      ${drawListSection(
+        "Education",
+        data.education,
+        (item) => `
+          <div class="mb-3">
+            <strong>${item.degree || "Degree"}</strong>, ${
+          item.school || "School"
+        }
+            <div class="text-muted">${item.period || "Timeline"}</div>
+            <p>${item.details || ""}</p>
+          </div>
+      `
+      )}
+      ${drawSkills(data.skillsArray)}
+    `,
