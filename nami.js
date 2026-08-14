@@ -96,29 +96,36 @@ const schema = [
   },
 ];
 
-const templates = {
+
+        
+ const templates = {
   minimal: {
     label: "Minimal",
     className: "template-minimal",
     render: (data) => `
-      
-        <header>
-          <h1>${data.fullName || "Suneo koze"}</h1>
-          <p className="text-muted">${data.role || "software"}</p>
-          <p>
-            ${joinValues(
-              [data.email, data.phone, data.location, data.website],
-              " . "
-            )}
-          </p>
-        </header>
-        <section>
-          <h2>Summary</h2>
-          <p>${data.summary || defaultSummary()}</p >
-        </section>
-        
-        `
-        
-    ),
-  },
-};
+      <header>
+        <h1>${data.fullName || "Your Name"}</h1>
+        <p class="text-muted">${data.role || "Title"}</p>
+        <p>${joinValues(
+          [data.email, data.phone, data.location, data.website],
+          " · "
+        )}</p>
+      </header>
+      <section>
+        <h2>Summary</h2>
+        <p>${data.summary || defaultSummary()}</p>
+      </section>
+      ${drawListSection(
+        "Experience",
+        data.experience,
+        (item) => `
+          <div class="mb-3">
+            <strong>${item.title || "Role"}</strong> — ${
+          item.company || "Company"
+        }
+            <div class="text-muted">${item.period || "Timeline"}</div>
+            ${drawHighlights(item.highlights)}
+          </div>
+      `
+      )}
+     
