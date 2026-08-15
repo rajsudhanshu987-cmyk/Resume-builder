@@ -143,3 +143,19 @@ const schema = [
       )}
       ${drawSkills(data.skillsArray)}
     `,
+  },
+  card: {
+    label: "Card",
+    className: "template-card",
+    render: (data) => `
+    <header class="mb-4">
+    <h1>${data.fullName || "Your Name"}</h1>
+    <p class="lead mb-2">${data.role || "title"}</p>
+    <div class="d-flex flex-wrap gap-2 text-muted">
+    ${drawBadges(
+      cleanValues([data.email, data.phone, data.location,data.website])
+    )}
+    </div>
+    </header>
+    `
+  }
