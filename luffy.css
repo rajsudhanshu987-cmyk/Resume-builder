@@ -1,0 +1,17 @@
+:root {
+  --resume-border: #e2e8f0;
+  --resume-heading: #10b981;
+  --resume-primary: #10b981;
+  --resume-primary-dark: #059669;
+  --surface-glass: rgba(255, 255, 255, 0.08);
+  --surface-panel: #ffffff;
+  --text-muted: #64748b;
+  --bg-soft: #f8fafc;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--bg-soft);
+}
