@@ -157,5 +157,15 @@ const schema = [
     )}
     </div>
     </header>
-    `
+    <section class="mb-4">
+    <h2>About</h2>
+    <p>${data.summary || defaultSummary()}</p>
+    </section>
+    <section class="mb-4">
+    <h2>Experience</h2>
+    ${drawCardList (
+      data.experience,
+      (item) => `
+      <div>
+    )}
   }
