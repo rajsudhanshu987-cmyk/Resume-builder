@@ -157,15 +157,22 @@ const schema = [
     )}
     </div>
     </header>
-    <section class="mb-4">
-    <h2>About</h2>
-    <p>${data.summary || defaultSummary()}</p>
-    </section>
-    <section class="mb-4">
-    <h2>Experience</h2>
-    ${drawCardList (
-      data.experience,
-      (item) => `
-      <div>
-    )}
-  }
+     <section class="mb-4">
+        <h2>About</h2>
+        <p>${data.summary || defaultSummary()}</p>
+      </section>
+      <section class="mb-4">
+        <h2>Experience</h2>
+        ${drawCardList(
+          data.experience,
+          (item) => `
+            <div>
+              <div class="fw-semibold">${item.title || "Role"}</div>
+              <div class="text-muted small">${item.company || "Company"} · ${
+            item.period || "Timeline"
+          }</div>
+              ${drawHighlights(item.highlights)}
+            </div>
+        `
+        )}
+      </section>
