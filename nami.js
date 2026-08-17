@@ -179,7 +179,18 @@ const schema = [
         <h2>Education</h2>
         ${drawCardList (
           data.education,
-          (item) =>`
-          `
+                  (item) => `
+            <div>
+              <div class="fw-semibold">${item.degree || "Degree"}</div>
+              <div class="text-muted small">${item.school || "School"} · ${
+            item.period || "Timeline"
+          }</div>
+              <p class="mb-0">${item.details || ""}</p>
+            </div>
+        `
         )}
-      
+      </section>
+      ${drawSkills(data.skillsArray)}
+    `,
+  },
+};
