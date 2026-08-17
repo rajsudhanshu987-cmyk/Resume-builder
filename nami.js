@@ -96,8 +96,7 @@ const schema = [
   },
 ];
 
-
-        
+       
  const templates = {
   minimal: {
     label: "Minimal",
@@ -176,3 +175,11 @@ const schema = [
         `
         )}
       </section>
+      <section class="mb-4">
+        <h2>Education</h2>
+        ${drawCardList (
+          data.education,
+          (item) =>`
+          `
+        )}
+      
