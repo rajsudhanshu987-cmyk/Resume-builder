@@ -26,3 +26,16 @@ body[data-mode="dark"] .card {
   color: #ecfdf5;
   border-color: rgba(16, 185, 129, 0.1);
 }
+
+
+.page-shell {
+  max-width: 1200px;
+}
+
+.frosted-header {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #10b981 100%);
+  color: #fff;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(6, 78, 59, 0.5);
+  transition: transform 0.3s ease;
+}
