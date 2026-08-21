@@ -54,3 +54,18 @@ body[data-mode="dark"] .card {
   );
   pointer-events: none;
 }
+
+.stat-chip {
+  padding: 0.85rem 1.25rem;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  min-width: 125px;
+  transition: all 0.3s ease;
+}
+
+.stat-chip:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
