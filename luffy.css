@@ -69,3 +69,18 @@ body[data-mode="dark"] .card {
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
 }
+
+
+.stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
