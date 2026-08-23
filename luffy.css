@@ -117,3 +117,15 @@ body[data-mode="dark"] .card {
   border-color: rgba(16, 185, 129, 0.4);
   transform: translateX(4px);
 }
+
+
+.section-nav button.is-complete {
+  border-color: rgba(16, 185, 129, 0.5);
+  color: #059669;
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.section-nav button.is-complete::after {
+  content: " \2713";
+  font-weight: bold;
+}
