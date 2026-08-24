@@ -149,3 +149,23 @@ body[data-mode="dark"] .card {
     ),
     linear-gradient(90deg, rgba(16, 185, 129, 0.04) 1px, transparent 1px);
 }
+
+.preview-pane.slate {
+  background-color: #022c22;
+}
+
+.preview-toolbar .btn.active {
+  background-color: var(--resume-primary);
+  color: #fff;
+  border-color: var(--resume-primary);
+}
+
+.template-pill {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.35rem 1.2rem;
+  background: transparent;
+  color: #fff;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
