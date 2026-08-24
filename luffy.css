@@ -169,3 +169,20 @@ body[data-mode="dark"] .card {
   font-size: 0.85rem;
   transition: all 0.3s ease;
 }
+
+.template-pill.active {
+  background: #fff;
+  color: #064e3b;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.resume-preview {
+  min-height: 600px;
+  border: 1px solid var(--resume-border);
+  border-radius: 1rem;
+  padding: 3rem;
+  background: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
