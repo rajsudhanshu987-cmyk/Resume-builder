@@ -235,3 +235,15 @@ body[data-mode="dark"] .card {
   padding: 0.4rem 0.8rem !important;
   font-weight: 600 !important;
 }
+
+.template-minimal {
+  border-left: 6px solid var(--resume-heading);
+  padding-left: 2rem;
+}
+
+.template-card {
+  border: 1px solid var(--resume-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
