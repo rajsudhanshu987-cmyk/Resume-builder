@@ -209,3 +209,13 @@ body[data-mode="dark"] .card {
   padding-bottom: 0.5rem;
   font-weight: 700;
 }
+
+.resume-preview p {
+  line-height: 1.6;
+  color: #334155;
+}
+
+.resume-preview ul {
+  padding-left: 1.25rem;
+}
+
