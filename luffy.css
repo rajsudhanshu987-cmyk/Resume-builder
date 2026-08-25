@@ -247,3 +247,15 @@ body[data-mode="dark"] .card {
   padding: 2rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
+
+.form-section-title {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  color: #10b981;
+  font-weight: 700;
+}
+
+.builder-panel .border {
+  border-color: #e2e8f0 !important;
+}
