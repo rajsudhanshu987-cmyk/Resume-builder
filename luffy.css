@@ -219,3 +219,19 @@ body[data-mode="dark"] .card {
   padding-left: 1.25rem;
 }
 
+
+.export-card {
+  border: 1px solid var(--resume-border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  background: #f8fafc;
+  margin-bottom: 1.25rem;
+}
+
+.badge-skill {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #065f46;
+  margin: 0.2rem;
+  padding: 0.4rem 0.8rem !important;
+  font-weight: 600 !important;
+}
