@@ -259,3 +259,15 @@ body[data-mode="dark"] .card {
 .builder-panel .border {
   border-color: #e2e8f0 !important;
 }
+
+.builder-panel input:focus,
+.builder-panel textarea:focus,
+.builder-panel select:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.btn-primary {
+  background-color: #10b981 !important;
+  border-color: #10b981 !important;
+}
