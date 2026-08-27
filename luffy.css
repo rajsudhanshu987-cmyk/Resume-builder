@@ -271,3 +271,15 @@ body[data-mode="dark"] .card {
   background-color: #10b981 !important;
   border-color: #10b981 !important;
 }
+
+
+
+.btn-primary:hover {
+  background-color: #059669 !important;
+  border-color: #059669 !important;
+}
+
+.btn-outline-primary {
+  color: #10b981 !important;
+  border-color: #10b981 !important;
+}
