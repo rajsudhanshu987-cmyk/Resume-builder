@@ -283,3 +283,14 @@ body[data-mode="dark"] .card {
   color: #10b981 !important;
   border-color: #10b981 !important;
 }
+
+.btn-outline-primary:hover {
+  background-color: #10b981 !important;
+  color: #fff !important;
+}
+
+@media (max-width: 991px) {
+  .builder-panel {
+    position: static !important;
+  }
+}
