@@ -193,4 +193,5 @@ const schema = [
       ${drawSkills(data.skillsArray)}
     `,
   },
+  
 };
