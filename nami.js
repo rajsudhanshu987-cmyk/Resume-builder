@@ -192,4 +192,5 @@ const templates = {
       ${drawSkills(data.skillsArray)}
     `,
   },
+  
 };
