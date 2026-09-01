@@ -226,3 +226,7 @@ const EXPORT_STYLES = `
   const previewPane = document.getElementById(".preview-pane");
   const previewBgButtons = document.getElementById("[data-preview-bg");
   const themeToggle = document.getElementById("themeToggle");
+  const collection = {};
+  const navButtons = new Map();
+  const templateButtons = new Map();
+  let sectionObserver;
