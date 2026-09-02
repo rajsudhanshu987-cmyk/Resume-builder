@@ -248,5 +248,23 @@ const EXPORT_STYLES = `
     if(!templatePills){
       templatePills.innerHTML = "";
     }
+    Object.entries(templates).forEach(([key, templates]) => {
+      const option = document.createElement("option");
+      option.value = key;
+      option.textContent = templateButtons.label;
+      templateSelect.appendChild(option);
+
+      const pill = document.createElement("button");
+      pill.type = "button";
+      pill.className = "template-pill";
+      pill.textContent = template.label;
+      pill.addEventListener("click" , () => {
+        state.templateKey = key;
+        templateSelect.value = key;
+        markTemplate(key);
+      })
+    }
+  )
   }
+
   
