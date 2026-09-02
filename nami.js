@@ -230,3 +230,23 @@ const EXPORT_STYLES = `
   const navButtons = new Map();
   const templateButtons = new Map();
   let sectionObserver;
+
+  startApp() ;
+
+  function startApp() {
+    setupTemplates();
+    buildform();
+    bindUI();
+    setPreviewBg("plain");
+    markTemplate(state.templateKey);
+    drawPreview();
+    refreshStats();
+  }
+
+  function setupTemplates() {
+    templateSelect.innerHTML = "";
+    if(!templatePills){
+      templatePills.innerHTML = "";
+    }
+  }
+  
