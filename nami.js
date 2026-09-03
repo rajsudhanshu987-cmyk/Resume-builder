@@ -275,4 +275,29 @@ const EXPORT_STYLES = `
   });
   }
 
-  
+  function buildForm(){
+    sectionObserver = new IntersectionObserver(watchSections , {
+      root: null,
+      threshold: 0.35,
+    });
+
+    schema.forEach((section) => {
+      const wrapper = document.createElement("section");
+      wrapper.className = "vstack gap-3 border-bottom pb-4";
+      wrapper.dataset.section = section.id;
+      wrapper.id = section.id;
+
+      const heading = document.createElement("div");
+      heading.className = "form-section-title";
+      heading.textContent = section.title;
+      wrapper.appendChild(heading);
+
+      if(section.repeatable) {
+        const collection = document.createElement("div");
+        collection.className = "vstack gap-3";
+        collection.dataset.collection = section.id;
+        collection[section.id] = collection;
+        wrapper.appendChild(collection);
+      }
+    })
+  }
