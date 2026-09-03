@@ -262,9 +262,17 @@ const EXPORT_STYLES = `
         state.templateKey = key;
         templateSelect.value = key;
         markTemplate(key);
-      })
-    }
-  )
+        drawPreview();
+      });
+      templatePills?.appendChild(pill);
+      templateButtons.set(key, pill);
+    });
+  templateSelect.value = state.templateKey;
+  templateSelect.addEventListener("Click" , (e) =>{
+    state.templateKey = e.target.value;
+    markTemplate(state.templateKey);
+    drawPreview();
+  });
   }
 
   
