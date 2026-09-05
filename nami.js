@@ -299,8 +299,24 @@ const EXPORT_STYLES = `
         collection[section.id] = collection;
         wrapper.appendChild(collection);
 
-        const controls = 
+        const controls = document.createElement("div");
+        controls.className = "d-flex justify-content-end";
+        const addBtn = document.createElement("button");
+        addBtn.type = "button";
+        addBtn.className = "btn btn-sm btn-outline-primary";
+        addBtn.textContent = `Add ${section.title}`;
+        addBtn.addEventListener("Click", () => addRepeater(section, collection));
+        controls.appendChild(addBtn);
+        wrapper.appendChild(controls);
+
+        addRepeater(section , collection);
+      }else{
+        const sectionBody = document.createElement("div");
+        sectionBody.className = "vstack gap-3";
+        section.fields.forEach((field) => {
+          sectionBody.appendChild(buildField(section, field));
+        });
+        wrapper.appendChild(sectionBody);
       }
-      
     })
   }
