@@ -318,5 +318,24 @@ const EXPORT_STYLES = `
         });
         wrapper.appendChild(sectionBody);
       }
-    })
+
+      form.appendChild(wrapper);
+      addSectionLink(section);
+      sectionObserver.observe(wrapper);
+    });
   }
+
+  function buildField(section, field, index = null) {
+  const fieldId =
+    index !== null
+      ? `${section.id}-${field.key}-${index}`
+      : `${section.id}-${field.key}`;
+  const container = document.createElement("div");
+  container.className = "form-group";
+
+  const label = document.createElement("label");
+  label.className = "form-label";
+  label.htmlFor = fieldId;
+  label.textContent = field.label;
+
+  
