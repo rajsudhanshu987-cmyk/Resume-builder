@@ -338,4 +338,29 @@ const EXPORT_STYLES = `
   label.htmlFor = fieldId;
   label.textContent = field.label;
 
+  let input;
+  if (field.type === "textarea") {
+    input = document.createElement("textarea");
+    input.rows = field.rows || 4;
+    input.className = "form-control";
+  }else {
+    input = document.createElement("input");
+    input.type = field.type;
+    input.className = "form-control"
+  }
+
+  input.placeholder = field.placeholder || "";
+  input.id = fieldId;
+  input.dataset.section = section.id;
+  input.dataset.key = field.key;
+  if(index!== null) {
+    input.dataset.index = index;
+  }
+  input.addEventListener("input", handleInput);
+
+  container.appendChild(label);
+  container.appendChild(input);
+  return container;
+}
+
   
