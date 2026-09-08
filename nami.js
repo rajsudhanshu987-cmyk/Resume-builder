@@ -363,4 +363,9 @@ const EXPORT_STYLES = `
   return container;
 }
 
+  function isRepeater(sectionId) {
+   return schema.find((section) => section.id === sectionId)?.repeatable;
+  }
+
+  
   
