@@ -241,6 +241,7 @@ const EXPORT_STYLES = `
     markTemplate(state.templateKey);
     drawPreview();
     refreshStats();
+    
   }
 
   function setupTemplates() {
