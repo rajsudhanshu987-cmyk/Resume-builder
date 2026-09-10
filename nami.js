@@ -172,6 +172,7 @@ const templates = {
               ${drawHighlights(item.highlights)}
             </div>
         `
+        
         )}
       </section>
       <section class="mb-4">
@@ -241,7 +242,7 @@ const EXPORT_STYLES = `
     markTemplate(state.templateKey);
     drawPreview();
     refreshStats();
-    
+
   }
 
   function setupTemplates() {
@@ -366,7 +367,28 @@ const EXPORT_STYLES = `
 
   function isRepeater(sectionId) {
    return schema.find((section) => section.id === sectionId)?.repeatable;
+   state.data[section] [idx] = state.data[section] [idx] || {};
+   state.data[section][idx][key] = value;
+  } else{
+     state.data[key] = value;
   }
+   drawPreview();
+   refreshStats();
+}
+  
+  function addRepeater(section , collection) {
+    const index = collection.childElementCount;
+    const card = document.createElement("div");
+    card.className = "border rounded-3 p-3 bg-light position-relative";
+    card.dataset.index = index;
 
-  
-  
+    section.fields.forEach((field) => {
+      card.appendChild(buildField(section, field , index));
+    });
+
+    if (index > 0){
+      const removeBtn = document.createElement("button");
+      removeBtn.type = "button";
+      removeBtn.className = "btn-close position-absolute top-0z"
+    }
+  }
