@@ -326,6 +326,7 @@ const EXPORT_STYLES = `
       sectionObserver.observe(wrapper);
     });
   }
+  
 
   function buildField(section, field, index = null) {
   const fieldId =
